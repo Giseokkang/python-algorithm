@@ -1,11 +1,9 @@
-import re
-
 class Solution:
-    def isPalindrome(self, s: str) -> bool:
-        s = s.lower()
-        s = re.sub('[^a-z0-9]', '',s)
-        return s == s[::-1]
+    def reverseString(self, s: list[str]) -> None:
+        left, right = 0, len(s) - 1
+        while left < right:
+            s[left], s[right] = s[right], s[left]
 
-s = 'A man, a plan, a canal: Panama'
+
 a = Solution()
-print(a.isPalindrome(s))
+print(a.reverseString(["h", "e", "l", "l", "o"]))
