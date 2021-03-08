@@ -1,7 +1,8 @@
 class Solution:
     def reverseString(self, s: list[str]) -> None:
-        s.reverse()
+        s = s[::-1]
+        return s
 
 
 a = Solution()
-print(a.reverseString(["h", "e", "l", "l", "o"]))
+print(a.reverseString("hello"))
